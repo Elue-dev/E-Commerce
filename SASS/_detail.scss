@@ -1,0 +1,12 @@
+.detailed{
+    .left-col{
+        width: 500px;
+        .small-img{
+            display: flex;
+            gap: .5rem;
+            img{
+                width: 9rem;
+            }
+        }
+    }
+}
