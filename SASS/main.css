@@ -115,7 +115,7 @@ header {
   }
   .nav ul li a {
     color: #fff;
-    font-size: 1rem;
+    font-size: .9rem;
   }
   .nav ul li a:hover {
     color: #ff523b;
@@ -131,6 +131,15 @@ header {
   .nav .active {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@media (max-width: 500px) {
+  .nav .logo img {
+    width: 7rem;
+  }
+  .nav .menu i {
+    font-size: 1.3rem;
   }
 }
 

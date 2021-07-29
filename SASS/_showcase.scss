@@ -1,0 +1,54 @@
+.showcase{
+    @include flexBox(auto, row);
+    flex-wrap: wrap;
+    margin-top: 4.5rem;
+    .image{
+        flex: 1;
+        img{
+            width: 35rem;
+        }
+    }
+    .text{
+        text-transform: capitalize;
+        max-width: 550px;
+        flex: 2;
+        overflow: hidden;
+        h1{
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            margin-bottom: 2rem;
+        }
+        a{
+            color: $main;
+            font-weight: 700;
+            font-size: 1.2rem;
+            i{
+                transition: .2s ease;
+                font-size: 1rem;
+            }
+            &:hover{
+                background: lighten ($main, 40%);
+                i{
+                    margin-left: .6rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px){
+    .showcase{
+        flex-flow: column;
+        text-align: center;
+    }
+    .showcase .text h1 {
+        font-size: 1.4rem;
+    }
+    .showcase .image img {
+        width: 22rem;
+        margin-top: 2rem;
+    }
+}
