@@ -74,3 +74,13 @@ header{
             
         }
     }
+
+    @media (max-width:300px){
+        .nav .logo img {
+            width: 6rem;
+        }
+        .nav .menu i {
+            font-size: 1.2rem;
+        }
+    }
+    

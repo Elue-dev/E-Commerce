@@ -68,9 +68,10 @@
     .container{
         @include flexBox(center, row);
         flex-wrap: wrap;
-        gap: 1.5rem;
+        gap: 2rem;
         .box{
             transition: all .2s ease;
+            overflow: hidden;
             img{
                 width: 15rem;
                 height: 20rem;
@@ -80,7 +81,7 @@
                 color: $main;
             }
             &:hover{
-                transform: scale(1.1);
+                transform: scaleX(1.1);
             }
         }
     }
@@ -90,9 +91,23 @@
 @media (max-width: 768px){
     .featured1 h1::after {
         top: 34px;
-        left: 36%;
+        left: 44%;
     }
 
+    .featured2 h1::after {
+        top: 34px;
+        left: 44%;
+    }
+    .products .item1 img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .featured1 h1::after {
+        top: 34px;
+        left: 36%;
+    }
     .featured2 h1::after {
         top: 34px;
         left: 36%;

@@ -1,0 +1,39 @@
+.testimonials{
+    margin-top: 4rem;
+    .container{
+        @include flexBox(space-around, row);
+        gap: 1.5rem;
+        text-align: center;
+        .box{
+            background: $light;
+            box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+            i{
+                color: $main;
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+            p{
+                margin-bottom: 1rem;
+            }
+            .ratings{
+                i{
+                    color: $main;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+            img{
+                height: 6rem;
+                width: 6rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+@media(max-width:768px){
+    .testimonials .container{
+        flex-flow: column;
+    }
+}

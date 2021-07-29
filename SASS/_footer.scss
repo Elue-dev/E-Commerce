@@ -1,0 +1,109 @@
+footer{
+    margin-top: 4rem;
+    background: #111;
+    font-size: .7rem;
+    .container{
+        @include flexBox(space-between, row);
+        flex-wrap: wrap;
+        padding: 2rem 6rem;
+        // border-bottom: 1px solid gray;
+        .item1{
+            line-height: 2.5;
+            h3{
+                color: $light;
+            }
+            p{
+                color: gray;
+                margin-bottom: 1rem;
+            }
+            .app{
+                img{
+                    width: 7rem;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .item2{
+        @include flexBox (center, column);
+        max-width: 400px;
+        img{
+            width: 10rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            color: gray;
+            text-align: center;
+        }
+    }
+
+    .item3{
+        text-align: center;
+        h3{
+            color: $light;
+            margin-bottom: .9rem;
+        }
+        li{
+            color: gray;
+        }
+    }
+
+    .item4{
+        text-align: center;
+        h3{
+            color: $light;
+            margin-bottom: .9rem;
+        }
+        li{
+            color: gray;
+        }
+    }
+
+    .wrapper2{
+        hr{
+            border: .1rem solid #666;
+        }
+        p{
+            text-align: center;
+            color: gray;
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+@media (max-width:768px){
+    footer .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    footer .container .item1 {
+        text-align: center;
+    }
+}
+
+
+@media (max-width:500px){
+    footer .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2rem 0rem;
+    }
+    footer .container .item1 p {
+        min-width: 270px;
+    }
+    footer .item2{
+        max-width: 300px;
+    }
+}
+
+
+@media (max-width: 336px){
+    footer .item2 {
+        max-width: 250px;
+    }
+}

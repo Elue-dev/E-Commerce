@@ -131,6 +131,15 @@ header {
   }
 }
 
+@media (max-width: 300px) {
+  .nav .logo img {
+    width: 6rem;
+  }
+  .nav .menu i {
+    font-size: 1.2rem;
+  }
+}
+
 .showcase {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,16 +188,15 @@ header {
 }
 
 .showcase .text a {
-  background: #ff523b;
-  color: #fff;
-  padding: .5rem 1rem;
-  border-radius: .6rem;
+  color: #ff523b;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .showcase .text a i {
   -webkit-transition: .2s ease;
   transition: .2s ease;
-  font-size: .7rem;
+  font-size: 1rem;
 }
 
 .showcase .text a:hover {
@@ -205,6 +213,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+    text-align: center;
   }
   .showcase .text h1 {
     font-size: 1.4rem;
@@ -337,12 +346,13 @@ header {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .featured2 .container .box {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+  overflow: hidden;
 }
 
 .featured2 .container .box img {
@@ -357,11 +367,25 @@ header {
 }
 
 .featured2 .container .box:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
 }
 
 @media (max-width: 768px) {
+  .featured1 h1::after {
+    top: 34px;
+    left: 44%;
+  }
+  .featured2 h1::after {
+    top: 34px;
+    left: 44%;
+  }
+  .products .item1 img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
   .featured1 h1::after {
     top: 34px;
     left: 36%;
@@ -375,9 +399,10 @@ header {
 .exclusive {
   background: radial-gradient(#fff, #ffd6d6);
   margin-top: 4rem;
+  padding: 30px 0;
 }
 
-.exclusive .container {
+.exclusive .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,50 +417,302 @@ header {
   padding: 5rem 0;
 }
 
-.exclusive .container .image img {
-  height: 15rem;
-  width: 15rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+.exclusive .row .image img {
+  height: 17rem;
+  width: 17rem;
 }
 
-.exclusive .container .text {
+.exclusive .row .text {
   max-width: 400px;
 }
 
-.exclusive .container .text h1 {
+.exclusive .row .text h1 {
   margin-bottom: 2rem;
 }
 
-.exclusive .container .text :nth-child(1), .exclusive .container .text :nth-child(3) {
+.exclusive .row .text :nth-child(1), .exclusive .row .text :nth-child(3) {
   margin-bottom: 2rem;
 }
 
-.exclusive .container .text a {
-  background: #ff523b;
-  color: #fff;
-  padding: .5rem 1rem;
-  border-radius: .6rem;
+.exclusive .row .text a {
+  color: #ff523b;
+  font-weight: 700;
 }
 
-.exclusive .container .text i {
+.exclusive .row .text i {
   -webkit-transition: .2s ease;
   transition: .2s ease;
   font-size: .7rem;
+  color: #ff523b;
 }
 
-.exclusive .container .text:hover {
+.exclusive .row .text:hover {
   background: lighten #ff523b, 40%;
 }
 
-.exclusive .container .text:hover i {
+.exclusive .row .text:hover i {
   margin-left: .6rem;
 }
 
 @media (max-width: 768px) {
+  .exclusive .container {
+    text-align: center;
+    padding: 2rem 0;
+  }
   .exclusive .container .text {
     overflow: hidden;
     margin-top: 3rem;
+  }
+}
+
+.testimonials {
+  margin-top: 4rem;
+}
+
+.testimonials .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.testimonials .container .box {
+  background: #fff;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials .container .box i {
+  color: #ff523b;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.testimonials .container .box p {
+  margin-bottom: 1rem;
+}
+
+.testimonials .container .box .ratings i {
+  color: #ff523b;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonials .container .box img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+.companies {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.companies img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter .2s ease;
+  transition: -webkit-filter .2s ease;
+  transition: filter .2s ease;
+  transition: filter .2s ease, -webkit-filter .2s ease;
+}
+
+.companies img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+@media (max-width: 500px) {
+  .companies {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .companies img {
+    width: 5rem;
+  }
+}
+
+footer {
+  margin-top: 4rem;
+  background: #111;
+  font-size: .7rem;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem 6rem;
+}
+
+footer .container .item1 {
+  line-height: 2.5;
+}
+
+footer .container .item1 h3 {
+  color: #fff;
+}
+
+footer .container .item1 p {
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+footer .container .item1 .app img {
+  width: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .item2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 400px;
+}
+
+footer .item2 img {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+
+footer .item2 p {
+  color: gray;
+  text-align: center;
+}
+
+footer .item3 {
+  text-align: center;
+}
+
+footer .item3 h3 {
+  color: #fff;
+  margin-bottom: .9rem;
+}
+
+footer .item3 li {
+  color: gray;
+}
+
+footer .item4 {
+  text-align: center;
+}
+
+footer .item4 h3 {
+  color: #fff;
+  margin-bottom: .9rem;
+}
+
+footer .item4 li {
+  color: gray;
+}
+
+footer .wrapper2 hr {
+  border: .1rem solid #666;
+}
+
+footer .wrapper2 p {
+  text-align: center;
+  color: gray;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  footer .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  footer .container .item1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 2rem 0rem;
+  }
+  footer .container .item1 p {
+    min-width: 270px;
+  }
+  footer .item2 {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 336px) {
+  footer .item2 {
+    max-width: 250px;
   }
 }
 /*# sourceMappingURL=main.css.map */

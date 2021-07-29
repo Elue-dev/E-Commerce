@@ -1,0 +1,21 @@
+.companies{
+    margin-top: 4rem;
+    @include flexBox(center,row);
+    img{
+        filter: grayscale(1);
+        transition: filter .2s ease;
+        &:hover{
+            filter: grayscale(0);
+        }
+    }
+}
+
+
+@media (max-width:500px){
+    .companies{
+        flex-flow: column;
+        img{
+            width: 5rem;
+        }
+    }
+}

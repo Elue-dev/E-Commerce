@@ -1,7 +1,8 @@
 .exclusive{
     background: radial-gradient($light, #ffd6d6);
     margin-top: 4rem;
-    .container{
+    padding: 30px 0;
+    .row{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -9,9 +10,8 @@
         padding: 5rem 0;
         .image{
             img{
-                height: 15rem;
-                width: 15rem;
-                object-fit: cover;
+                height: 17rem;
+                width: 17rem;
             }
         }
         .text{
@@ -23,14 +23,13 @@
                 margin-bottom: 2rem;
             }
             a{
-                background: $main;
-                color: $light;
-                padding: .5rem 1rem;
-                border-radius: .6rem;
+                color: $main;
+                font-weight: 700;
             }
             i{
                 transition: .2s ease;
                 font-size: .7rem;
+                color: $main;
             }
             &:hover{
                 background: lighten ($main, 40%);
@@ -44,6 +43,10 @@
 
 
 @media (max-width:768px){
+    .exclusive .container{
+        text-align: center;
+        padding: 2rem 0;
+    }
     .exclusive .container .text {
         overflow: hidden;
         margin-top: 3rem;
