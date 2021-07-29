@@ -19,6 +19,7 @@
     .menu{
         i{
             display: none;
+            transition: .4s ease;
         }
     }
 }
@@ -54,6 +55,7 @@ header{
                         color: $light;
                         &:hover{
                             color: $main;
+                            font-size: 1rem;
                         }
                     }
                 }

@@ -67,6 +67,8 @@ body {
 
 .nav .menu i {
   display: none;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
 header {
@@ -116,6 +118,7 @@ header {
   }
   .nav ul li a:hover {
     color: #ff523b;
+    font-size: 1rem;
   }
   .nav .menu i {
     display: block;
@@ -163,6 +166,7 @@ header {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  overflow: hidden;
 }
 
 .showcase .text h1 {
@@ -362,6 +366,10 @@ header {
     top: 34px;
     left: 36%;
   }
+  .featured2 h1::after {
+    top: 34px;
+    left: 36%;
+  }
 }
 
 .exclusive {
@@ -381,13 +389,7 @@ header {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 2rem 15rem;
-}
-
-.exclusive .container .image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  padding: 5rem 0;
 }
 
 .exclusive .container .image img {
@@ -398,9 +400,7 @@ header {
 }
 
 .exclusive .container .text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  max-width: 400px;
 }
 
 .exclusive .container .text h1 {
@@ -430,5 +430,12 @@ header {
 
 .exclusive .container .text:hover i {
   margin-left: .6rem;
+}
+
+@media (max-width: 768px) {
+  .exclusive .container .text {
+    overflow: hidden;
+    margin-top: 3rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
