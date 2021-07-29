@@ -1,12 +1,29 @@
 .testimonials{
     margin-top: 4rem;
+    h1{
+        text-align: center;
+        margin-bottom: 4rem;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            height: .3rem;
+            width: 80px;
+            background-color: $main;
+            top: 38px;
+            left: 45%;
+        }
+    }
     .container{
         @include flexBox(space-around, row);
         gap: 1.5rem;
         text-align: center;
         .box{
             background: $light;
-            box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+            // box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+            border: .1rem solid rgb(184, 183, 183);
+            border-radius: .5rem;
+            cursor: pointer;
             i{
                 color: $main;
                 font-size: 3rem;
@@ -35,5 +52,20 @@
 @media(max-width:768px){
     .testimonials .container{
         flex-flow: column;
+    }
+    .testimonials .container .box {
+        padding: .7rem;
+    }
+    .testimonials h1::after {
+        top: 34px;
+        left: 44%;
+    }
+
+}
+
+@media(max-width:500px){
+    .testimonials h1::after {
+        top: 34px;
+        left: 36%;
     }
 }

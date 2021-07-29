@@ -51,4 +51,20 @@
         overflow: hidden;
         margin-top: 3rem;
     }
+    .exclusive .row .text a {
+        display: none;
+    }
+    .exclusive .row{
+        padding: 0;
+    }
+    .exclusive .row .text :nth-child(1), .exclusive .row .text :nth-child(3) {
+        margin-bottom: 1rem;
+    }
+    .exclusive .row .text h1 {
+        margin-bottom: 1rem;
+    }  
+    .exclusive .row .image img {
+        height: 16rem;
+        width: 16rem;
+    }  
 }

@@ -53,10 +53,13 @@ header{
                     margin-bottom: .8rem;
                     a{
                         color: $light;
+                        font-size: 1.05rem;
                         &:hover{
                             color: $main;
-                            font-size: 1rem;
                         }
+                    }
+                    i{
+                        display: none;
                     }
                 }
             }
