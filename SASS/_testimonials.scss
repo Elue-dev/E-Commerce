@@ -15,8 +15,9 @@
         }
     }
     .container{
-        @include flexBox(space-around, row);
-        gap: 1.5rem;
+        // @include flexBox(space-around, row);
+        @include grid (repeat(3,1fr), 1rem);
+        // gap: 1.5rem;
         text-align: center;
         .box{
             background: $light;
@@ -50,12 +51,14 @@
 
 
 @media(max-width:768px){
-    .testimonials .container{
-        flex-flow: column;
+    .testimonials .container {
+        grid-template-columns: 1fr;
     }
+
     .testimonials .container .box {
         padding: .7rem;
     }
+    
     .testimonials h1::after {
         top: 34px;
         left: 44%;

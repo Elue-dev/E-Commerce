@@ -3,8 +3,9 @@ footer{
     background: #111;
     font-size: .7rem;
     .container{
-        @include flexBox(space-between, row);
-        flex-wrap: wrap;
+        // @include flexBox(space-between, row);
+        // flex-wrap: wrap;
+        @include grid (repeat(4,1fr), 1rem);
         padding: 2rem 6rem;
         // border-bottom: 1px solid gray;
         .item1{
@@ -78,7 +79,9 @@ footer{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
+        place-items: center;
     }
+
     footer .container .item1 {
         text-align: center;
     }
@@ -87,12 +90,12 @@ footer{
 
 @media (max-width:500px){
     footer .container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        padding: 2rem 0rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        place-items: center;
     }
+
     footer .container .item1 p {
         min-width: 270px;
     }
