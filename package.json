@@ -1,0 +1,20 @@
+{
+  "name": "E-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elue-dev/E-Commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elue-dev/E-Commerce/issues"
+  },
+  "homepage": "https://github.com/Elue-dev/E-Commerce#readme"
+}

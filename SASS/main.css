@@ -71,6 +71,13 @@ body {
   transition: .4s ease;
 }
 
+.fa-times {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
 header {
   background: radial-gradient(#fff, #ffd6d6);
 }
@@ -128,6 +135,16 @@ header {
     display: block;
     cursor: pointer;
     font-size: 1.5rem;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .nav .fa-times {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .nav .active {
     -webkit-transform: scale(1);
